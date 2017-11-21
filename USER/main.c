@@ -50,10 +50,11 @@
 				if(NRF24L01_RxPacket(tmp_buf)==0)//一旦接收到信息,则显示出来.
 				{
 //					tmp_buf[32]=0;//加入字符串结束符
-					printf("%d %d\r\n",tmp_buf[0],tmp_buf[29]); 
+					printf("%d %d\r\n",tmp_buf[0],tmp_buf[28]); 
 					LCD_ShowString(0,190,239,32,16,tmp_buf); 	
 					NRF24L01_TX_Mode();
 					NRF24L01_TxPacket(tmp_buf);
+					NRF24L01_RX_Mode();
 				}else delay_us(100);	   
 				t++;
 				if(t==10000)//大约1s钟改变一次状态
