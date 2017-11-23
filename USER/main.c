@@ -11,7 +11,7 @@
 //广州市星翼电子科技有限公司  
  int main(void)
  {	 
-	u8 key,mode;
+	u8 key,mode,state = 0;
 	u16 t=0;			 
 	u8 tmp_buf[30];		    
 	delay_init();	    	 //延时函数初始化	  
@@ -53,7 +53,9 @@
 					printf("%d %d\r\n",tmp_buf[0],tmp_buf[28]); 
 					LCD_ShowString(0,190,239,32,16,tmp_buf); 	
 					NRF24L01_TX_Mode();
-					NRF24L01_TxPacket(tmp_buf);
+					state = NRF24L01_TxPacket(tmp_buf);
+					printf("tx_state: %x \r\n",state); 
+					state = 0;
 					NRF24L01_RX_Mode();
 				}else delay_us(100);	   
 				t++;

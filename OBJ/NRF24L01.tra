@@ -29,7 +29,7 @@
 ### ADS-LD Output File: '..\OBJ\NRF24L01.axf'
 ### ADS-LD Command File: '..\OBJ\NRF24L01.lnp'
 ### Checking for dirty Components...
-### Creating CmdFile '..\OBJ\NRF24L01.lnp', Handle=0x000005C8
+### Creating CmdFile '..\OBJ\NRF24L01.lnp', Handle=0x000006D4
 ### Writing '.lnp' file
 ### ADS-LD Command file '..\OBJ\NRF24L01.lnp' is ready.
 ### ADS-LD: About to start ADS-LD Thread.
