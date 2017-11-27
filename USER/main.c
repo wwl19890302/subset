@@ -13,7 +13,7 @@
  {	 
 	u8 key,mode,state = 0;
 	u16 t=0;			 
-	u8 tmp_buf[30];		    
+	u8 tmp_buf[32];		    
 	delay_init();	    	 //延时函数初始化	  
 	NVIC_Configuration(); 	 //设置NVIC中断分组2:2位抢占优先级，2位响应优先级
 	uart_init(9600);	 	//串口初始化为9600
